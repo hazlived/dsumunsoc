@@ -1,0 +1,442 @@
+@font-face {
+    font-family: "museo";
+    src: url("Museo.otf");
+}
+
+@font-face {
+    font-family: "museo-sans";
+    src: url("MuseoSans.otf");
+}
+
+h3.yellow {
+    color: #ffd700;
+}
+
+h2.yellow {
+    color: #ffd700;
+}
+
+/* Left column styling */
+.left-col {
+    background-image: url("/img/MODEL_UNITED_NATIONS.png");
+    box-shadow: inset -20px 0 30px -10px rgba(42, 42, 42, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    object-fit: scale-down;
+    overflow: hidden;
+}
+
+/* Left column leak effect */
+.left-col::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -40px; /* Extend further into the carousel */
+    width: 100px; /* Increase width for a more gradual transition */
+    height: 100%;
+    z-index: 2;
+}
+
+/* Right column leak effect */
+.carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px; /* Extend into the left column */
+    width: 100px; /* Increase width for better blending */
+    height: 100%;
+    filter: blur(75px); /* Match blur level with left column */
+    z-index: 2;
+}
+
+/* Transparent blending layer */
+.blend-overlay {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Center between both columns */
+    transform: translateX(-50%);
+    width: 150px; /* Wider blending area */
+    height: 100%;
+    filter: blur(40px); /* Strong blur for ultra-smooth transition */
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Carousel styling */
+.carousel,
+.carousel-item,
+.carousel-item img {
+    height: 100vh; /* Full viewport height */
+    object-fit: cover;
+    position: relative; /* Needed for the overlay */
+}
+
+/* Text styling */
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+
+/* COPE title block styling (big yellow COPE, white subtitle, edition text) */
+.cope-title {
+    font-family: "museo", "museo-sans", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.02;
+    letter-spacing: 0.02em;
+    display: block;
+    text-align: center;
+}
+
+.cope-title.yellow {
+    color: #ffd700; /* golden */
+    font-weight: 900;
+}
+
+.title-sub {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 800;
+    line-height: 1.08;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45);
+}
+
+.dsumun2-home-img h2.cope-title {
+    /* reduce max to keep desktop size in check — targets only the H2 headline */
+    font-size: clamp(2.2rem, 6.5vw, 5.5rem);
+    line-height: 1.05;
+}
+
+.dsumun2-home-img .title-sub {
+    font-size: clamp(1.1rem, 4.2vw, 2.6rem);
+    line-height: 1.05;
+}
+
+.dsumun2-home-img h3.cope-title {
+    margin: 0.5rem 0 0 0;
+    font-size: clamp(0.6rem, 2.8vw, 1.8rem);
+    font-weight: 900;
+    color: #ffd700;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.dsumun2-home-img {
+    position: relative;
+    text-align: center;
+}
+
+/* On larger screens, give subtitle and edition some spacing */
+@media (min-width: 1025px) {
+    .dsumun2-home-img .title-sub {
+        display: block;
+    }
+    /* Reduce COPE (H2) size on desktop so it doesn't overwhelm the layout */
+    .dsumun2-home-img h2.cope-title {
+        font-size: 4.2rem !important;
+    }
+    .dsumun2-home-img h3.cope-title {
+        margin-top: 0.6rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    /* Cap the H2 headline on very large screens */
+    .dsumun2-home-img h2.cope-title {
+        font-size: 5.2rem !important;
+    }
+}
+
+/* Higher-specificity overrides to beat other stylesheet rules */
+@media (min-width: 1025px) {
+    .left-col .dsumun2-home-img h2.cope-title {
+        font-size: 4.4rem !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .left-col .dsumun2-home-img h2.cope-title {
+        font-size: 4.8rem !important;
+    }
+}
+
+/* Button styling */
+.btn-register#home-btn {
+    background-color: #f6b000; /* Golden color */
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+    border: 2px solid #f6b000;
+}
+
+/* Register button styling - same as home button */
+.btn-register#register-btn {
+    background-color: #f6b000; /* Golden color */
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+    border: 2px solid #f6b000;
+    text-decoration: none;
+}
+
+/* Button container responsive styling */
+.home-buttons-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Ensure both button wrapper divs are perfectly aligned */
+.home-buttons-container > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Ensure both buttons have exactly the same positioning */
+.btn-register#home-btn,
+.btn-register#register-btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.btn-register:hover {
+    background: transparent; /* Ensure background stays transparent */
+    color: #ffd700; /* Text turns golden */
+    border-color: #ffd700; /* Keep the border yellow */
+}
+
+/* Know More button hover effect */
+.btn-register#home-btn:hover {
+    background: transparent !important; /* Ensure background stays transparent */
+    color: #ffd700 !important; /* Text turns golden */
+    border-color: #ffd700 !important; /* Keep the border yellow */
+}
+
+/* Register button hover effect - same as home button */
+.btn-register#register-btn:hover {
+    background: transparent; /* Ensure background stays transparent */
+    color: #ffd700; /* Text turns golden */
+    border-color: #ffd700; /* Keep the border yellow */
+}
+
+/* Remove border animation */
+.btn-register:hover::before,
+.btn-register:hover::after {
+    animation: none;
+}
+
+.home-logo {
+    width: 15vh; /* Adjust size as needed */
+    margin-left: 1.5vh;
+    margin-top: 40%;
+    max-width: 80%;
+    height: auto;
+}
+/* Ensure button adjusts well */
+#home-btn {
+    width: fit-content;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+#register-btn {
+    width: fit-content;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.dsumun2-home-img {
+    margin-top: -10% !important;
+    width: 100%;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+span.title-sub {
+    color: white;
+}
+
+.cope-title {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .dsumun2-home-img img {
+        width: 100%;
+        max-width: 500px; /* keep reasonable maximum on larger phones */
+        max-width: 250px;
+    }
+
+    .title-sub {
+        font-size: 2.2vh;
+        text-align: center;
+        font-weight: 400;
+        margin-top: 7px;
+    }
+
+    .btn-register {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .carousel-item img {
+        height: 50vh;
+    }
+
+    .container-md img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #home-btn {
+        width: fit-content;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #register-btn {
+        width: fit-content;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Tablet button container styling */
+    .home-buttons-container {
+        gap: 12px !important;
+        margin-top: 18px !important;
+    }
+
+    .btn-register#home-btn {
+        font-size: 1.4vh;
+    }
+
+    .btn-register#register-btn {
+        font-size: 1.4vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-logo {
+        text-align: center;
+        max-width: 120px;
+        margin-top: 80%;
+    }
+
+    .btn-register {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .dsumun2-home-img img {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .container-md img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .dsumun2-home-img {
+        width: 500px;
+    }
+
+    #home-btn {
+        width: fit-content;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Mobile button container styling */
+    .home-buttons-container {
+        flex-direction: row !important;
+        gap: 10px !important;
+        align-items: center !important;
+        margin-top: 15px !important;
+        justify-content: center !important;
+    }
+
+    #register-btn {
+        width: fit-content;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .dsumun2-home-img .cope-title {
+        font-size: clamp(2.9rem, 9.5vw, 4.5rem);
+        line-height: 1.45;
+    }
+
+    .dsumun2-home-img .title-sub {
+        font-size: clamp(1.5rem, 4.6vw, 2rem);
+        display: block;
+        line-height: 1.4;
+    }
+
+    .dsumun2-home-img h3.cope-title {
+        font-size: clamp(0.8rem, 3.6vw, 1.4rem);
+        line-height: 0.95;
+        margin-top: 0.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel-container {
+        display: none !important;
+    }
+
+    .dsumun2-home-img img {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .btn-register {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .container-md img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #home-btn {
+        width: fit-content;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .left-col {
+        width: 100vw;
+    }
+}

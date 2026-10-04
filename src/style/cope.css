@@ -1,0 +1,982 @@
+.cope-about-card {
+    margin-bottom: 50px;
+    border: none;
+    transition: transform 0.3s ease;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.cope-about-card:hover {
+    transform: scale(1.05);
+}
+
+.yellow {
+    color: #ffd700;
+}
+
+.cope-about-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    width: 100%;
+    background-position: center;
+    background-image: url("/img/modelun_2.jpg"); /* Adjust the background image */
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.cope-about-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/modelun_2.jpg"); /* Adjust the background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(9px);
+    transform: scale(1.04);
+    z-index: -1;
+}
+
+.dsumun2 .dsumun2-card {
+    width: 26vw;
+    height: 45vh;
+    margin: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.dsumun2 .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.dsumun2 .card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.cope-title {
+    font-family: "museo", "museo-sans", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.02;
+    letter-spacing: 0.02em;
+    display: block;
+    text-align: center;
+}
+
+.cope-title.yellow {
+    color: #ffd700;
+    font-weight: 900;
+    text-align: center;
+}
+
+.title-sub {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 800;
+    line-height: 1.08;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45);
+}
+
+.dsumun2-home-img h2.cope-title {
+    font-size: clamp(2.2rem, 6.5vw, 5.5rem);
+    line-height: 1.05;
+}
+
+.dsumun2-home-img .title-sub {
+    font-size: clamp(1.1rem, 4.2vw, 2.6rem);
+    line-height: 1.05;
+}
+
+.dsumun2-home-img h3.cope-title {
+    margin: 0.5rem 0 0 0;
+    font-size: clamp(0.8rem, 2.2vw, 1.2rem);
+    font-weight: 900;
+    color: #ffd700;
+    text-align: center;
+    line-height: 1;
+}
+
+.dsumun2-home-img {
+    position: relative;
+    text-align: center;
+}
+
+.cope2-home {
+    text-align: left;
+}
+
+.cope2-home .cope-title {
+    text-align: left !important;
+}
+
+.cope2-home .title-sub {
+    text-align: left !important;
+}
+
+/* Front & Back Faces */
+.dsumun2 .card-front,
+.dsumun2 .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: white;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Front Side */
+.dsumun2 .card-front {
+    border: 1px solid #ddd;
+}
+
+/* Back Side */
+.dsumun2 .card-back {
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 30px;
+}
+
+.card-img-comittee {
+    width: 250px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.dsumun2 .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Agenda Styling */
+.dsumun2 .agenda-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.dsumun2 .agenda-text {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Spacing & Separators */
+.dsumun2 .separator-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.dsumun2 .separator {
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dsumun2 .card {
+        width: 450px;
+        height: 400px;
+    }
+
+    .title-cope {
+        font-size: 2.8rem;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .dsumun2 .card-title {
+        font-size: 1.2rem;
+    }
+
+    .dsumun2 .agenda-title {
+        font-size: 1.5rem;
+    }
+
+    .dsumun2 .agenda-text {
+        font-size: 1rem;
+    }
+
+    .cope2-home.cope-title {
+        font-size: clamp(3.3rem, 9.5vw, 4.5rem);
+        line-height: 1.45;
+    }
+
+    .cope2-home .title-sub {
+        font-size: clamp(1.5rem, 4.6vw, 2rem);
+        display: block;
+        line-height: 1.4;
+    }
+
+    .cope2-home h3.cope-title {
+        font-size: clamp(0.8rem, 3.6vw, 1.4rem);
+        line-height: 0.95;
+        margin-top: 0.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .dsumun2 .card {
+        width: 450px;
+        height: 400px;
+    }
+    .dsumun2-card {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dsumun2-card {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .committee-header {
+        padding-left: 20px;
+    }
+
+    .dsumun2-card {
+        margin-left: 30px !important;
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+.cope-card-body {
+    font-family: "museo-sans";
+    color: black; /* Ensure good readability */
+    font-size: 16px;
+    text-align: justify;
+}
+
+.cope-card-text {
+    font-family: "museo-sans";
+    font-size: 18px;
+}
+
+.cope-title {
+    font-weight: bolder;
+    font-family: "museo-sans";
+    color: white;
+    font-size: 2.8rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.cope2-Banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    padding: 5%;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Content layout */
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 5%;
+}
+
+/* Left side - Logo */
+.left-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 2 00px;
+}
+
+.cope2-logo {
+    width: 100%;
+    max-width: 850px;
+}
+.card-img-comittee {
+    width: 100%;
+    height: auto; /* let height scale naturally */
+    max-height: 180px; /* Reduced from 250px */
+    max-width: 220px; /* Added max width */
+    object-fit: contain; /* Changed from cover to contain */
+    object-position: center;
+    border-radius: 0.5rem; /* matches card rounding */
+    margin-bottom: 15px; /* Added margin */
+}
+
+/* Adjust Image Sizes */
+.img-dsu {
+    width: 20vh;
+    max-width: 150px;
+}
+
+.img-org {
+    width: 25vh;
+    max-width: 250px;
+}
+
+.right-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#dsumun2_background_btn {
+    margin-left: 20px;
+}
+
+/* GENERAL STYLES */
+.cope-gallery {
+    margin-top: 40px;
+}
+
+/* IMAGE HOVER EFFECTS */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* MODAL STYLES */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.modal-img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    color: #00204a;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+img.cope2-logo {
+    min-width: 500px;
+}
+
+.close-btn:hover {
+    background: #ffd700;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .cope-about-container {
+        margin-top: 8%;
+        margin-left: 0;
+        margin-bottom: 3rem;
+        height: auto;
+        padding: 1rem;
+    }
+
+    img.cope2-logo {
+        min-width: 300px;
+    }
+
+    .cope-title {
+        font-size: 4vw;
+    }
+
+    .cope-card-text {
+        font-size: 16px;
+    }
+}
+
+/* Desktop overrides: cap headline on wide screens and ensure this rule wins */
+.dsumun2-home-img h2.cope-title {
+    font-size: clamp(2.2rem, 6.5vw, 5.5rem);
+}
+
+@media (min-width: 1025px) {
+    .dsumun2-home-img h2.cope-title {
+        font-size: 4.8rem !important;
+        line-height: 1.5;
+    }
+    span.title-cope {
+        font-size: 4.8rem;
+        line-height: 1.3;
+    }
+    .dsumun2-home-img {
+        line-height: 1.8;
+    }
+    h3.cope-title {
+        font-size: 2.3rem;
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 1400px) {
+    .dsumun2-home-img h2.cope-title {
+        font-size: 5.2rem !important;
+    }
+}
+
+/* Higher-specificity overrides so pages using cope.css also get the smaller desktop font */
+@media (min-width: 1025px) {
+    .cope2-Banner .dsumun2-home-img h2.cope-title {
+        font-size: 4.4rem !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .cope2-Banner .dsumun2-home-img h2.cope-title {
+        font-size: 4.8rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cope-about-container {
+        margin-top: 12%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .cope-about-card {
+        width: 95%;
+        padding: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .gallery-img {
+        max-height: 200px;
+    }
+
+    .cope-title {
+        font-size: 5vw;
+        margin-bottom: 1rem;
+    }
+
+    .cope-card-text {
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .cope-about-container {
+        position: relative;
+        margin-top: 25% !important;
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    /* Additional selector to ensure the container moves down */
+    .container {
+        margin-top: 30% !important;
+    }
+
+    /* Target the specific container style in COPE2.jsx */
+    div[style*="marginTop"] {
+        margin-top: 30% !important;
+    }
+
+    .cope-about-card {
+        width: 98%;
+        padding: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cope-cardy {
+        margin-top: 20px;
+    }
+
+    .gallery-img {
+        max-height: 180px;
+    }
+
+    .cope-title {
+        font-size: 6vw;
+        margin-bottom: 1rem;
+    }
+
+    .cope-card-text {
+        font-size: 13px;
+        line-height: 1.4;
+        text-align: justify !important;
+    }
+}
+
+/* COPE2 Banner Styling */
+.cope2-Banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height for desktop */
+    display: flex;
+    flex-direction: column; /* Stack content and button */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center;
+    overflow: hidden;
+    padding: 5%;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Zoomed-in video */
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Dark overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% darkness */
+    z-index: 1; /* Keeps it above the video */
+}
+
+/* Content layout */
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Above the overlay */
+    height: auto;
+    margin-top: 10%;
+}
+
+.cope2-landing {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cope2-logo {
+    max-width: 300px;
+    height: auto;
+}
+
+.left-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.img-dsu,
+.img-org {
+    max-width: 200px;
+    height: auto;
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Register buttons */
+.register-cope2 {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    z-index: 3;
+}
+
+/* .btn-register {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.btn-register:hover {
+    background: linear-gradient(135deg, #357abd, #2a5a8a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+    color: white;
+    text-decoration: none;
+} */
+
+.cope-com {
+    max-width: 100%;
+}
+
+/* COPE-II Committee Cards - Match DSUMUN-II styling */
+.committees-dsumun2 .dsumun2-card {
+    width: 300px;
+    height: 400px;
+    margin: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.committees-dsumun2 .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.committees-dsumun2 .dsumun2-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back Faces for COPE-II */
+.committees-dsumun2 .card-front,
+.committees-dsumun2 .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: white;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+/* Back Side for COPE-II */
+.committees-dsumun2 .card-back {
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* COPE-II specific card image sizing */
+.committees-dsumun2 .card-img-comittee {
+    width: 200px;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* COPE-II card titles */
+.committees-dsumun2 .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* COPE-II agenda styling */
+.committees-dsumun2 .agenda-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 12px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.committees-dsumun2 .agenda-text {
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 15px;
+    font-family: "museo", sans-serif;
+}
+
+/* Mobile Responsive for COPE-II Cards */
+@media (max-width: 768px) {
+    .committees-dsumun2 .dsumun2-card {
+        width: 280px !important;
+        height: 350px !important;
+        margin: 0.5rem !important;
+    }
+
+    .committees-dsumun2 .card-img-comittee {
+        width: 160px !important;
+        height: 120px !important;
+    }
+
+    .committees-dsumun2 .card-back {
+        padding: 15px !important;
+    }
+
+    .committees-dsumun2 .agenda-title {
+        font-size: 18px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .committees-dsumun2 .agenda-text {
+        font-size: 14px !important;
+        line-height: 1.3 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .committees-dsumun2 .dsumun2-card {
+        width: 250px !important;
+        height: 320px !important;
+    }
+
+    .committees-dsumun2 .card-img-comittee {
+        width: 140px !important;
+        height: 100px !important;
+    }
+
+    .committees-dsumun2 .card-back {
+        padding: 12px !important;
+    }
+
+    .committees-dsumun2 .agenda-title {
+        font-size: 16px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .committees-dsumun2 .agenda-text {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* Mobile responsiveness for COPE2 Banner */
+@media (max-width: 768px) {
+    .cope2-Banner {
+        height: 100vh !important;
+        padding: 2%;
+    }
+
+    .cope2-logo {
+        max-width: 180px;
+    }
+
+    .img-dsu,
+    .img-org {
+        max-width: 80px;
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .cope2-landing {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 5%;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .cope2-landing .left-logo {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .cope2-landing .dsumun2-home-img {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+    }
+
+    /* Committee logos container mobile spacing */
+    .right-images div[style*="gap: 2rem"] {
+        gap: 1rem !important;
+    }
+
+    .register-cope2 {
+        bottom: 8%;
+    }
+
+    .btn-register {
+        font-size: 14px;
+        padding: 12px 25px;
+        margin: 5px;
+    }
+}
+
+/* COPE2 Register Button Styling */
+#cope2-register-btn,
+#cope2-register-btn-mobile {
+    background-color: #f6b000; /* Golden color */
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+    border: 2px solid #f6b000;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#cope2-register-btn:hover,
+#cope2-register-btn-mobile:hover {
+    background: transparent !important;
+    color: #ffd700 !important;
+    border-color: #ffd700 !important;
+    text-decoration: none;
+}
+
+/* Show desktop button, hide mobile button by default */
+.register-btn-desktop {
+    display: block;
+}
+
+.register-btn-mobile {
+    display: none;
+}
+
+/* Mobile responsive for COPE2 register button */
+@media (max-width: 768px) {
+    /* Hide desktop button, show mobile button */
+    .register-btn-desktop {
+        display: none !important;
+    }
+
+    .register-btn-mobile {
+        display: block !important;
+        text-align: center;
+    }
+
+    #cope2-register-btn-mobile {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    #cope2-register-btn-mobile {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}

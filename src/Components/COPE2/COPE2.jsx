@@ -3,7 +3,15 @@ import Nav from "../Nav.jsx";
 import Footer from "../Footer.jsx";
 import "../../style/cope.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faX } from "@fortawesome/free-solid-svg-icons";
+import {
+    faX,
+    faCalendarAlt,
+    faTrophy,
+    faEnvelope,
+    faPhone,
+    faMapMarkerAlt,
+    faExternalLinkAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-modal";
 
 Modal.setAppElement("#root");
@@ -62,15 +70,30 @@ const COPE2 = () => {
                                 className="dsumun2-home-img"
                                 style={{ marginBottom: "40px" }}
                             >
-                                <h2 className="cope-title yellow">
-                                    COPE <br />{" "}
-                                    <span className="title-sub break-if-wide">
-                                        CONFERENCE OF <br /> PUBLIC EXCHANGE
-                                    </span>
+                                <h2 className="cope-title" style={{ color: "#ffffff" }}>
+                                    DSU COPE MUN
                                 </h2>
-                                <h3 className="cope-title yellow">
-                                    EDITION II
-                                </h3>
+                                <h4 style={{ color: "#74C0FC", fontFamily: "museo", letterSpacing: "2px", textTransform: "uppercase", marginTop: "10px", fontStyle: "italic" }}>
+                                    "A Pass at the Infinite"
+                                </h4>
+                                <div
+                                    className="d-inline-flex justify-content-center align-items-center flex-wrap gap-3 gap-md-4 mt-4 px-4 py-2"
+                                    style={{
+                                        backgroundColor: "rgba(0, 24, 56, 0.5)",
+                                        border: "1px solid rgba(116, 192, 252, 0.25)",
+                                        borderRadius: "4px",
+                                    }}
+                                >
+                                    <div className="d-flex align-items-center" style={{ color: "#ffffff", fontSize: "1rem", fontWeight: "600" }}>
+                                        <FontAwesomeIcon icon={faCalendarAlt} className="me-2" style={{ color: "#74C0FC" }} />
+                                        <span>23rd - 24th October</span>
+                                    </div>
+                                    <div style={{ width: "1px", height: "18px", backgroundColor: "rgba(255, 255, 255, 0.3)" }} className="d-none d-sm-block"></div>
+                                    <div className="d-flex align-items-center" style={{ color: "#ffffff", fontSize: "1rem", fontWeight: "600" }}>
+                                        <FontAwesomeIcon icon={faTrophy} className="me-2" style={{ color: "#74C0FC" }} />
+                                        <span>Prize Pool: Rs. 18,000+</span>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Register Button - Desktop only */}
@@ -85,7 +108,7 @@ const COPE2 = () => {
                                     className="btn btn-register"
                                     id="cope2-register-btn"
                                 >
-                                    Register
+                                    Register Now
                                 </a>
                             </div>
                         </div>
@@ -191,24 +214,10 @@ const COPE2 = () => {
                                             color: "#333",
                                         }}
                                     >
-                                        MUNSOC is proud to announce COPE Edition
-                                        II, the Conference of Public
-                                        Exchange—our premier intra-MUN, which
-                                        will be held on November 15th, 2025. This edition will feature
-                                        two dynamic committees: the United
-                                        Nations General Assembly – DISEC and the
-                                        Group of 20, where participants will
-                                        engage in timely discussions on pressing
-                                        global issues.
+                                        MUNSOC is proud to announce <strong>DSU COPE MUN</strong> under the theme <em>"A Pass at the Infinite"</em> - our premier intra-MUN conference held on <strong>23rd - 24th October</strong>. This edition features two dynamic committees: the United Nations General Assembly - DISEC and the Group of 20, where participants engage in timely discussions on pressing global issues with an exciting prize pool of <strong>Rs. 18,000+</strong>.
                                         <br />
                                         <br />
-                                        Infused with MUNSOC’s core values, COPE
-                                        Edition II will continue to foster
-                                        dialogue, critical thinking, and
-                                        leadership, providing a platform for
-                                        students to voice their perspectives on
-                                        matters shaping both our nation and the
-                                        world.
+                                        Infused with MUNSOC's core values, DSU COPE MUN continues to foster dialogue, critical thinking, and leadership, providing a platform for students to voice their perspectives on matters shaping both our nation and the world.
                                     </p>
                                 </div>
                             </div>
@@ -300,11 +309,6 @@ const COPE2 = () => {
                     )}
 
                     <div className="committee-dsumun2-broucher text-center">
-                        {/*                         <a href="https://drive.google.com/drive/folders/16SWPBO5t5i6Nh9eX3J9NdxYTTG6OOxG6?usp=sharing" className="btn btn-register" id="dsumun2_background_btn" style={{ width: "300px", fontSize: "20px", margin: "30px" }}>
-                            Background Guides
-                        </a> */}
-
-                        {/* Modal for displaying the PDF */}
                         <Modal
                             isOpen={isOpen}
                             onRequestClose={() => setIsOpen(false)}
@@ -348,7 +352,6 @@ const COPE2 = () => {
                 </div>
             </div>
 
-            {/* After the top container-fluid (closed above), these are sibling sections */}
             <br />
             <br />
 
@@ -367,7 +370,7 @@ const COPE2 = () => {
                             PRIZEPOOL
                         </h1>
                         <h1 className="dsumun2-prizepool-two text-nowrap w-100">
-                            Rs. 6,000+
+                            Rs. 18,000+
                         </h1>
                     </div>
                 </div>
@@ -383,6 +386,115 @@ const COPE2 = () => {
                     height="50px"
                     alt="separator"
                 />
+            </div>
+
+            {/* EVENT POSTER & REGISTRATION SECTION */}
+            <div className="container my-5">
+                <div
+                    className="p-4 p-md-5 rounded-3 shadow-lg"
+                    style={{
+                        backgroundColor: "#001838",
+                        border: "1px solid rgba(116, 192, 252, 0.3)",
+                    }}
+                >
+                    <h2
+                        className="display-5 text-center mb-4"
+                        style={{ fontFamily: "museo", color: "#ffffff" }}
+                    >
+                        Official Event Poster
+                    </h2>
+                    <div className="row justify-content-center align-items-center">
+                        <div className="col-12 col-lg-6 mb-4 mb-lg-0 text-center">
+                            <div className="p-2 bg-dark rounded shadow border border-secondary d-inline-block">
+                                <img
+                                    src="/img/dsu_cope_mun_poster.jpg"
+                                    alt="DSU COPE MUN Poster"
+                                    className="img-fluid rounded"
+                                    style={{ maxHeight: "550px", objectFit: "contain" }}
+                                />
+                            </div>
+                        </div>
+                        <div className="col-12 col-lg-6 text-white text-lg-start px-md-4">
+                            <h3 className="fw-bold mb-2" style={{ fontFamily: "museo", color: "#74C0FC" }}>
+                                DSU COPE MUN
+                            </h3>
+                            <h5 className="fst-italic mb-4" style={{ color: "#b0d4ff" }}>
+                                "A Pass at the Infinite"
+                            </h5>
+
+                            <div className="d-flex flex-column gap-3 mb-4">
+                                <div className="d-flex align-items-center gap-3">
+                                    <div className="p-2 rounded" style={{ backgroundColor: "#00204A", color: "#74C0FC" }}>
+                                        <FontAwesomeIcon icon={faCalendarAlt} className="fs-5" />
+                                    </div>
+                                    <div>
+                                        <div style={{ fontSize: "0.8rem", color: "#74C0FC", textTransform: "uppercase", fontWeight: "700" }}>Date</div>
+                                        <div className="fs-6 fw-semibold" style={{ color: "#ffffff" }}>23rd - 24th October</div>
+                                    </div>
+                                </div>
+
+                                <div className="d-flex align-items-center gap-3">
+                                    <div className="p-2 rounded" style={{ backgroundColor: "#00204A", color: "#74C0FC" }}>
+                                        <FontAwesomeIcon icon={faTrophy} className="fs-5" />
+                                    </div>
+                                    <div>
+                                        <div style={{ fontSize: "0.8rem", color: "#74C0FC", textTransform: "uppercase", fontWeight: "700" }}>Prize Pool</div>
+                                        <div className="fs-6 fw-semibold" style={{ color: "#ffffff" }}>Rs. 18,000+</div>
+                                    </div>
+                                </div>
+
+                                <div className="d-flex align-items-center gap-3">
+                                    <div className="p-2 rounded" style={{ backgroundColor: "#00204A", color: "#74C0FC" }}>
+                                        <FontAwesomeIcon icon={faMapMarkerAlt} className="fs-5" />
+                                    </div>
+                                    <div>
+                                        <div style={{ fontSize: "0.8rem", color: "#74C0FC", textTransform: "uppercase", fontWeight: "700" }}>Venue</div>
+                                        <div className="fs-6 fw-semibold" style={{ color: "#ffffff" }}>Dayananda Sagar University</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="my-4">
+                                <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSefJLccrPOvyj62y2XOUEf2DcKMjCCXHyUiga3--k-pj9GiBw/viewform"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn btn-primary btn-lg px-4 py-2 fw-bold text-white d-inline-flex align-items-center"
+                                    style={{ borderRadius: "6px" }}
+                                >
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} className="me-2" />
+                                    Click Here to Register
+                                </a>
+                            </div>
+
+                            <div
+                                className="p-3 rounded mt-4"
+                                style={{
+                                    backgroundColor: "#00204A",
+                                    border: "1px solid rgba(116, 192, 252, 0.3)",
+                                }}
+                            >
+                                <h6 className="fw-bold mb-2" style={{ color: "#74C0FC" }}>
+                                    For More Details Contact:
+                                </h6>
+                                <div className="d-flex align-items-center gap-2 mb-1">
+                                    <FontAwesomeIcon icon={faEnvelope} style={{ color: "#74C0FC" }} />
+                                    <span style={{ color: "#ffffff" }}>Email:</span>
+                                    <a href="mailto:dsumunsoc@gmail.com" style={{ color: "#74C0FC" }} className="text-decoration-underline">
+                                        dsumunsoc@gmail.com
+                                    </a>
+                                </div>
+                                <div className="d-flex align-items-center gap-2">
+                                    <FontAwesomeIcon icon={faPhone} style={{ color: "#74C0FC" }} />
+                                    <span style={{ color: "#ffffff" }}>Phone:</span>
+                                    <a href="tel:+918618220160" style={{ color: "#74C0FC" }} className="text-decoration-underline">
+                                        +91 86182 20160
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <br />

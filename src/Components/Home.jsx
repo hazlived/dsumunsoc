@@ -4,6 +4,8 @@ import Footer from "./Footer.jsx";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt, faTrophy } from "@fortawesome/free-solid-svg-icons";
 import "../style/home.css";
 
 const Home = () => {
@@ -14,32 +16,43 @@ const Home = () => {
                 <div className="row vh-100">
                     <div
                         className="col-md-6 left-col"
-                        style={{ maxHeight: "100vh" }}
+                        style={{ minHeight: "100vh" }}
                     >
-                        <div className="d-flex flex-column align-items-center justify-content-center">
-                            <div>
+                        <div className="d-flex flex-column align-items-center justify-content-center py-4 px-3 text-center">
+                            <div className="mb-3">
                                 <img
                                     src="/img/MUNSOCLOGO2-white.png"
-                                    alt="DSUMUN II"
-                                    className="img-fluid mb-2 home-logo"
+                                    alt="DSUMUN Logo"
+                                    className="img-fluid home-logo"
                                 />
                             </div>
-                            <br />
-                            <br />
-                            <br />
                             <div
-                                className="dsumun2-home-img"
-                                style={{ marginBottom: "40px" }}
+                                className="dsumun2-home-img text-center my-3"
                             >
-                                <h2 className="cope-title yellow">
-                                    COPE <br />{" "}
-                                    <span className="title-sub break-if-wide">
-                                        CONFERENCE OF <br /> PUBLIC EXCHANGE
-                                    </span>
+                                <h2 className="cope-title" style={{ color: "#ffffff", fontSize: "2.8rem", fontWeight: "bold" }}>
+                                    DSU COPE MUN
                                 </h2>
-                                <h3 className="cope-title yellow">
-                                    EDITION II
-                                </h3>
+                                <h4 style={{ color: "#74C0FC", fontFamily: "museo", letterSpacing: "2px", textTransform: "uppercase", marginTop: "12px", fontStyle: "italic" }}>
+                                    "A Pass at the Infinite"
+                                </h4>
+                                <div
+                                    className="d-inline-flex justify-content-center align-items-center flex-wrap gap-3 gap-md-4 mt-4 px-4 py-2"
+                                    style={{
+                                        backgroundColor: "rgba(0, 24, 56, 0.5)",
+                                        border: "1px solid rgba(116, 192, 252, 0.25)",
+                                        borderRadius: "4px",
+                                    }}
+                                >
+                                    <div className="d-flex align-items-center" style={{ color: "#ffffff", fontSize: "1rem", fontWeight: "600" }}>
+                                        <FontAwesomeIcon icon={faCalendarAlt} className="me-2" style={{ color: "#74C0FC" }} />
+                                        <span>23rd - 24th October</span>
+                                    </div>
+                                    <div style={{ width: "1px", height: "18px", backgroundColor: "rgba(255, 255, 255, 0.3)" }} className="d-none d-sm-block"></div>
+                                    <div className="d-flex align-items-center" style={{ color: "#ffffff", fontSize: "1rem", fontWeight: "600" }}>
+                                        <FontAwesomeIcon icon={faTrophy} className="me-2" style={{ color: "#74C0FC" }} />
+                                        <span>Prize Pool: Rs. 18,000+</span>
+                                    </div>
+                                </div>
                             </div>
 
                             <div
@@ -54,19 +67,6 @@ const Home = () => {
                                 }}
                             >
                                 <div style={{ position: "relative" }}>
-                                    <svg
-                                        className="button-sketch"
-                                        viewBox="0 0 300 100"
-                                        style={{
-                                            position: "absolute",
-                                            top: "-50%",
-                                            left: "50%",
-                                            transform: "translate(-50%, -50%)",
-                                            width: "140%",
-                                            height: "200%",
-                                            pointerEvents: "none",
-                                        }}
-                                    ></svg>
                                     <Link
                                         to="/cope2"
                                         className="btn btn-register"
@@ -76,19 +76,6 @@ const Home = () => {
                                     </Link>
                                 </div>
                                 <div style={{ position: "relative" }}>
-                                    <svg
-                                        className="button-sketch"
-                                        viewBox="0 0 300 100"
-                                        style={{
-                                            position: "absolute",
-                                            top: "-50%",
-                                            left: "50%",
-                                            transform: "translate(-50%, -50%)",
-                                            width: "140%",
-                                            height: "200%",
-                                            pointerEvents: "none",
-                                        }}
-                                    ></svg>
                                     <a
                                         href="https://docs.google.com/forms/d/e/1FAIpQLSefJLccrPOvyj62y2XOUEf2DcKMjCCXHyUiga3--k-pj9GiBw/viewform"
                                         target="_blank"
@@ -96,7 +83,7 @@ const Home = () => {
                                         className="btn btn-register"
                                         id="register-btn"
                                     >
-                                        Register
+                                        Register Now
                                     </a>
                                 </div>
                             </div>

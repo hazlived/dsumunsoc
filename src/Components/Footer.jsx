@@ -11,7 +11,7 @@ const Footer = () => {
             </div>
             <div className="social-links mt-2">
                 <a
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=president@dsumunsoc.in&su=Inquiry%20from%20DSU%20MUN%20Website&body=Hello%20DSU%20MUN%20Team,%0D%0A%0D%0AI%20am%20reaching%20out%20through%20your%20website%20to%20inquire%20about:%0D%0A%0D%0A-%20COPE%20II%20Event%20Registration%0D%0A-%20Executive%20Board%20Positions%0D%0A-%20General%20Information%20about%20DSU%20MUN%20Society%0D%0A%0D%0APlease%20let%20me%20know%20how%20I%20can%20get%20involved!%0D%0A%0D%0ABest%20regards"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=dsumunsoc@gmail.com&su=Inquiry%20from%20DSU%20MUN%20Website&body=Hello%20DSU%20MUN%20Team,%0D%0A%0D%0AI%20am%20reaching%20out%20through%20your%20website%20to%20inquire%20about:%0D%0A%0D%0A-%20COPE%20II%20Event%20Registration%0D%0A-%20Executive%20Board%20Positions%0D%0A-%20General%20Information%20about%20DSU%20MUN%20Society%0D%0A%0D%0APlease%20let%20me%20know%20how%20I%20can%20get%20involved!%0D%0A%0D%0ABest%20regards"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

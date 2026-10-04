@@ -225,24 +225,12 @@ h2 {
     vertical-align: top;
 }
 
-.btn-register:hover {
-    background: transparent; /* Ensure background stays transparent */
-    color: #ffd700; /* Text turns golden */
-    border-color: #ffd700; /* Keep the border yellow */
-}
-
-/* Know More button hover effect */
-.btn-register#home-btn:hover {
-    background: transparent !important; /* Ensure background stays transparent */
-    color: #ffd700 !important; /* Text turns golden */
-    border-color: #ffd700 !important; /* Keep the border yellow */
-}
-
-/* Register button hover effect - same as home button */
+.btn-register:hover,
+.btn-register#home-btn:hover,
 .btn-register#register-btn:hover {
-    background: transparent; /* Ensure background stays transparent */
-    color: #ffd700; /* Text turns golden */
-    border-color: #ffd700; /* Keep the border yellow */
+    background-color: rgba(116, 192, 252, 0.15) !important;
+    color: #74C0FC !important;
+    border-color: #74C0FC !important;
 }
 
 /* Remove border animation */
@@ -252,10 +240,11 @@ h2 {
 }
 
 .home-logo {
-    width: 15vh; /* Adjust size as needed */
-    margin-left: 1.5vh;
-    margin-top: 40%;
-    max-width: 80%;
+    width: auto;
+    max-width: 180px;
+    max-height: 120px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
     height: auto;
 }
 /* Ensure button adjusts well */
@@ -347,7 +336,7 @@ span.title-sub {
     .home-logo {
         text-align: center;
         max-width: 120px;
-        margin-top: 80%;
+        margin: 1rem auto;
     }
 
     .btn-register {

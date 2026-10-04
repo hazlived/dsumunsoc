@@ -11,7 +11,7 @@ const Warning = () => {
   return (
     <Modal show={show} onHide={() => setShow(false)} centered>
       <Modal.Header closeButton>
-        <Modal.Title>⚠️ Early Bird Registration Ending Soon!</Modal.Title>
+        <Modal.Title>Early Bird Registration Ending Soon!</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         Hurry up! The early bird registrations for <b>DSUMUN Edition II</b> is going to close on <b>March 10, 2025</b>. Don't miss out!

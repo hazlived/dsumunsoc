@@ -31,7 +31,7 @@ Any administrative errors or duplicate registrations will be handled at the disc
           Force Majeure: The organizers shall not be liable for any failure or delay in performance arising out of causes beyond their reasonable control.</p>
           <p><strong>Contact Information:</strong>It is the responsibility of participants to provide accurate and up-to-date contact information during registration.
 For any queries or assistance regarding these Terms & Conditions, please contact:
-Email: delegate-affairs@dsumunsoc.in
+Email: dsumunsoc@gmail.com
 Phone: 7022179550 </p>
             <p><strong>You agree to share information entered on this page with ORG Foundation, The Model United Nations Society, Dayananda Sagar University and Razorpay, adhering to applicable laws.</strong></p>
         </div>

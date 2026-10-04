@@ -134,7 +134,7 @@ const Nav = () => {
                                 aria-expanded="false"
                                 style={{ color: "white" }}
                             >
-                                COPE-II
+                                DSU COPE MUN
                             </a>
                             <ul
                                 className="dropdown-menu"

@@ -1,10 +1,24 @@
-# React + Vite
+# DSU Model United Nations Society (DSU MUNSOC)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official Web Application for Dayananda Sagar University Model United Nations Society (DSU MUNSOC).
 
-Currently, two official plugins are available:
+## Features
+- **DSU COPE MUN**: Intra-MUN conference details, agendas, and executive board showcase.
+- **Historical Archives**: Comprehensive coverage of DSUMUN Edition II, DSUMUN Edition I, COPE Edition I, and inter-collegiate delegation achievements.
+- **Interactive Component Architecture**: Horizontal scroll card showcases, modal brochure preview, and responsive design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **Framework**: React 18 + Vite 5
+- **Styling**: Custom CSS Design System + Bootstrap 5
+- **Icons**: Lucide React
 
-Commit Track - 3.
+## Development
+```bash
+npm install
+npm run dev
+```
+
+## Production Build
+```bash
+npm run build
+```

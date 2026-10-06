@@ -1,74 +1,55 @@
-import { useState, useEffect } from "react";
-import {
-    BrowserRouter as Router,
-    Route,
-    Routes,
-    useLocation,
-} from "react-router-dom";
-import Home from "./Components/Home.jsx";
-import COPE from "./Components/Events/COPE.jsx";
-import COPE2 from "./Components/COPE2/COPE2.jsx";
-import Delegation from "./Components/Events/Delegation.jsx";
-import DSUMUN1 from "./Components/Events/DSUMUN1.jsx";
-import Secretariat from "./Components/Secretariat/Secretariat.jsx";
-import DSUMUN2 from "./Components/Events/DSUMUN2/DSUMUN2.jsx";
-import Others from "./Components/Events/Others.jsx";
-import Eb from "./Components/Events/DSUMUN2/Eb.jsx";
-import Cope2Eb from "./Components/COPE2/Cope2Eb.jsx";
-import "./App.css";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-function LoadingScreen() {
-    return (
-        <div id="loading-screen">
-            <img
-                src="/img/logo_white.png"
-                alt="MUNSOC Logo"
-                id="loading-logo"
-                width="200"
-                height="200"
-            />
-        </div>
-    );
-}
+import Home from "./pages/Home";
+import Cope2 from "./pages/Cope2";
+import Cope2Eb from "./pages/Cope2Eb";
+import Dsumun2 from "./pages/Dsumun2";
+import Dsumun1 from "./pages/Dsumun1";
+import Cope1 from "./pages/Cope1";
+import Delegation from "./pages/Delegation";
+import Secretariat from "./pages/Secretariat";
+import Others from "./pages/Others";
 
-function AppContent() {
-    const [loading, setLoading] = useState(true);
-    const location = useLocation();
+// Scroll to top helper on route navigation
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
 
-    useEffect(() => {
-        setLoading(true);
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 800);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-        return () => clearTimeout(timer);
-    }, [location]);
-
-    return (
-        <>
-            {loading && <LoadingScreen />}
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/cope2" element={<COPE2 />} />
-                <Route path="/events/cope" element={<COPE />} />
-                <Route path="/events/dsumun2" element={<DSUMUN2 />} />
-                <Route path="/events/delegation" element={<Delegation />} />
-                <Route path="/events/dsumun1" element={<DSUMUN1 />} />
-                <Route path="/secretariat" element={<Secretariat />} />
-                <Route path="/events/others" element={<Others />} />
-                <Route path="/dsumun2/executive-board" element={<Eb />} />
-                <Route path="/cope2/executive-board" element={<Cope2Eb />} />
-            </Routes>
-        </>
-    );
-}
+  return null;
+};
 
 function App() {
-    return (
-        <Router>
-            <AppContent />
-        </Router>
-    );
+  return (
+    <Router>
+      <ScrollToTop />
+      <div className="d-flex flex-column min-vh-100" style={{ backgroundColor: "#121417" }}>
+        <Navbar />
+        <main className="flex-grow-1" style={{ paddingTop: "70px" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cope2" element={<Cope2 />} />
+            <Route path="/cope2/executive-board" element={<Cope2Eb />} />
+            <Route path="/events/dsumun2" element={<Dsumun2 />} />
+            <Route path="/events/dsumun1" element={<Dsumun1 />} />
+            <Route path="/events/cope1" element={<Cope1 />} />
+            <Route path="/events/cope" element={<Cope1 />} />
+            <Route path="/events/delegation" element={<Delegation />} />
+            <Route path="/events/others" element={<Others />} />
+            <Route path="/secretariat" element={<Secretariat />} />
+            {/* Fallback to Home */}
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;

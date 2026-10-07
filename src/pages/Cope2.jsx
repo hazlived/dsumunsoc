@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Calendar, Award, MapPin, ExternalLink, Mail, Phone, Users } from "lucide-react";
+import { Calendar, Award, MapPin, Mail, Phone, Users, ShieldCheck } from "lucide-react";
 import HorizontalScrollCards from "../components/HorizontalScrollCards";
-
-const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeLck_D2M8_dn_pv1fMxjKPZ4hm-fCqzOpyMCIhU5qAticMpw/viewform";
 
 const Cope2 = () => {
   const committees = [
@@ -64,13 +62,13 @@ const Cope2 = () => {
             />
           </div>
 
-          <span className="eyebrow-text mb-2">PREMIER INTRA-MUN CONFERENCE</span>
+          <span className="eyebrow-text mb-2">PAST INTRA-MUN EDITION ARCHIVE</span>
 
           <h1
             className="display-3 fw-bold mb-2"
             style={{ fontFamily: "'Cinzel', serif", color: "#FFFFFF", letterSpacing: "1px" }}
           >
-            DSU COPE MUN
+            DSU COPE MUN (Edition II)
           </h1>
 
           <h4
@@ -83,7 +81,7 @@ const Cope2 = () => {
           <div className="d-flex justify-content-center align-items-center flex-wrap gap-4 mb-4 py-2">
             <div className="d-flex align-items-center gap-2" style={{ color: "#FFFFFF", fontWeight: "600" }}>
               <Calendar size={18} style={{ color: "#D4AF37" }} />
-              <span>23rd - 24th October</span>
+              <span>Concluded Event</span>
             </div>
             <span style={{ color: "rgba(255,255,255,0.2)" }} className="d-none d-sm-inline">•</span>
             <div className="d-flex align-items-center gap-2" style={{ color: "#FFFFFF", fontWeight: "600" }}>
@@ -93,17 +91,15 @@ const Cope2 = () => {
           </div>
 
           <div className="d-flex align-items-center justify-content-center flex-wrap gap-3">
-            <a
-              href={REGISTRATION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold text-decoration-none"
+            <div
+              className="d-inline-flex align-items-center gap-2 px-3 py-2 rounded"
+              style={{ backgroundColor: "rgba(212, 175, 55, 0.15)", border: "1px solid #D4AF37", color: "#D4AF37", fontSize: "0.9rem" }}
             >
-              Register Now
-              <ExternalLink size={16} />
-            </a>
+              <ShieldCheck size={18} />
+              <span>Event Concluded</span>
+            </div>
             <Link to="/cope2/executive-board" className="btn-outline-gold text-decoration-none">
-              View Executive Board
+              View Executive Board Archive
               <Users size={16} className="ms-2" />
             </Link>
           </div>
@@ -117,7 +113,7 @@ const Cope2 = () => {
             <div className="col-12 col-lg-10">
               <div className="custom-card p-4 p-md-5">
                 <div className="text-center mb-4">
-                  <span className="eyebrow-text">CONFERENCE OVERVIEW</span>
+                  <span className="eyebrow-text">CONFERENCE ARCHIVE OVERVIEW</span>
                   <h2 className="display-6 fw-bold" style={{ color: "#FFFFFF", fontFamily: "'Cinzel', serif" }}>
                     COPE Edition II: The Conference of Public Exchange
                   </h2>
@@ -125,11 +121,11 @@ const Cope2 = () => {
                 </div>
 
                 <p className="lead text-justify" style={{ color: "#CBD5E1", lineHeight: "1.8" }}>
-                  MUNSOC is proud to announce <strong>DSU COPE MUN</strong> under the theme <em>"A Pass at the Infinite"</em> - our premier intra-MUN conference held on <strong>23rd - 24th October</strong>. This edition features two dynamic committees: the United Nations General Assembly - DISEC and the Group of 20, where participants engage in timely discussions on pressing global issues with an exciting prize pool of <strong>Rs. 18,000+</strong>.
+                  MUNSOC hosted <strong>DSU COPE MUN Edition II</strong> under the theme <em>"A Pass at the Infinite"</em>. This edition featured two dynamic committees: the United Nations General Assembly - DISEC and the Group of 20, where participants engaged in timely discussions on pressing global issues with an exciting prize pool of <strong>Rs. 18,000+</strong>.
                 </p>
 
                 <p className="text-justify mb-0" style={{ color: "#9DA5B4", lineHeight: "1.8" }}>
-                  Infused with MUNSOC's core values, DSU COPE MUN continues to foster dialogue, critical thinking, and leadership, providing a platform for students to voice their perspectives on matters shaping both our nation and the world.
+                  Infused with MUNSOC's core values, DSU COPE MUN Edition II fostered dialogue, critical thinking, and leadership, providing a platform for students to voice their perspectives on matters shaping both our nation and the world.
                 </p>
               </div>
             </div>
@@ -141,19 +137,19 @@ const Cope2 = () => {
       <section className="py-5 section-dark">
         <div className="container px-4">
           <div className="text-center mb-4">
-            <span className="eyebrow-text">COMMITTEE DETAILS</span>
+            <span className="eyebrow-text">COMMITTEE ARCHIVES</span>
             <h2 className="display-6 fw-bold" style={{ color: "#FFFFFF" }}>
-              Our Committees & Agendas
+              Edition II Committees & Agendas
             </h2>
             <div className="gold-separator"></div>
           </div>
 
-          <HorizontalScrollCards title="Active Committees" subtitle="COPE II">
+          <HorizontalScrollCards title="Archived Committees" subtitle="COPE II">
             {committees.map((comm) => (
               <div
                 key={comm.id}
                 className="custom-card flex-shrink-0 p-4 d-flex flex-column justify-content-between"
-                style={{ width: "380px", minHeight: "360px" }}
+                style={{ width: "380px", minHeight: "320px" }}
               >
                 <div>
                   <div className="d-flex align-items-center justify-content-between mb-3">
@@ -168,24 +164,15 @@ const Cope2 = () => {
                   </small>
 
                   <div className="agenda-block">
-                    <span className="agenda-label">Agenda</span>
+                    <span className="agenda-label">Historical Agenda</span>
                     <p className="agenda-text">
                       "{comm.agenda}"
                     </p>
                   </div>
                 </div>
 
-                <div className="pt-3 border-top border-secondary">
-                  <a
-                    href={REGISTRATION_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-gold text-decoration-none w-100 text-center"
-                    style={{ fontSize: "0.85rem", padding: "8px 16px" }}
-                  >
-                    Register for {comm.name}
-                    <ExternalLink size={14} className="ms-2" />
-                  </a>
+                <div className="pt-3 border-top border-secondary text-center">
+                  <span style={{ color: "#9DA5B4", fontSize: "0.82rem" }}>Concluded Edition</span>
                 </div>
               </div>
             ))}
@@ -196,7 +183,7 @@ const Cope2 = () => {
       {/* Prize Pool Display */}
       <section className="py-5 section-charcoal text-center border-top border-bottom border-secondary">
         <div className="container px-4">
-          <span className="eyebrow-text">CASH REWARDS & TROPHIES</span>
+          <span className="eyebrow-text">HISTORICAL REWARDS</span>
           <h2 className="display-4 fw-bold gold-text mb-2">
             PRIZE POOL: Rs. 18,000+
           </h2>
@@ -206,7 +193,7 @@ const Cope2 = () => {
         </div>
       </section>
 
-      {/* Event Poster & Contact Info */}
+      {/* Event Poster & Information */}
       <section className="py-5 section-dark">
         <div className="container px-4">
           <div className="custom-card p-4 p-md-5">
@@ -215,7 +202,7 @@ const Cope2 = () => {
                 <div className="p-2 bg-dark rounded d-inline-block" style={{ border: "1px solid rgba(255,255,255,0.1)" }}>
                   <img
                     src="/img/dsu_cope_mun_poster.jpg"
-                    alt="DSU COPE MUN Poster"
+                    alt="DSU COPE MUN Edition II Poster"
                     className="img-fluid rounded"
                     style={{ maxHeight: "480px", objectFit: "contain" }}
                     onError={(e) => {
@@ -227,41 +214,28 @@ const Cope2 = () => {
               </div>
 
               <div className="col-12 col-lg-7">
-                <span className="eyebrow-text">REGISTRATION DESK</span>
+                <span className="eyebrow-text">EDITION ARCHIVE</span>
                 <h3 className="h2 fw-bold mb-2" style={{ color: "#FFFFFF", fontFamily: "'Cinzel', serif" }}>
-                  Join DSU COPE MUN
+                  DSU COPE MUN Edition II
                 </h3>
                 <p style={{ color: "#9DA5B4", marginBottom: "20px" }}>
-                  Registration is open to all university and collegiate delegates. Secure your preference for DISEC or G20 today.
+                  This conference has concluded. Check our home page for active current events like COPE 3!
                 </p>
 
                 <div className="my-4">
-                  <a
-                    href={REGISTRATION_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-gold text-decoration-none px-4 py-3"
-                  >
-                    Click Here to Register Now
-                    <ExternalLink size={18} className="ms-2" />
-                  </a>
+                  <Link to="/cope3" className="btn-gold text-decoration-none px-4 py-3">
+                    View Current Active Event (COPE 3)
+                  </Link>
                 </div>
 
                 <div className="pt-3 border-top border-secondary">
-                  <span className="agenda-label">For More Details Contact Us:</span>
+                  <span className="agenda-label">Contact Secretariat:</span>
                   <div className="d-flex flex-column gap-2 mt-2" style={{ fontSize: "0.92rem", color: "#CBD5E1" }}>
                     <div className="d-flex align-items-center gap-2">
                       <Mail size={16} style={{ color: "#D4AF37" }} />
                       <span>Email:</span>
                       <a href="mailto:dsumunsoc@gmail.com" style={{ color: "#D4AF37" }} className="text-decoration-underline">
                         dsumunsoc@gmail.com
-                      </a>
-                    </div>
-                    <div className="d-flex align-items-center gap-2">
-                      <Phone size={16} style={{ color: "#D4AF37" }} />
-                      <span>Phone:</span>
-                      <a href="tel:+918618220160" style={{ color: "#D4AF37" }} className="text-decoration-underline">
-                        +91 86182 20160
                       </a>
                     </div>
                     <div className="d-flex align-items-center gap-2">

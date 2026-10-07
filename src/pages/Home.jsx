@@ -1,34 +1,51 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Calendar, Award, MapPin, ExternalLink, ArrowRight, Shield, Globe, Users, Mail, Phone } from "lucide-react";
+import { Calendar, Award, MapPin, ExternalLink, ArrowRight, Shield, Globe, Users, Mail, Phone, FileText } from "lucide-react";
 import HorizontalScrollCards from "../components/HorizontalScrollCards";
 
 const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeLck_D2M8_dn_pv1fMxjKPZ4hm-fCqzOpyMCIhU5qAticMpw/viewform";
+const BROCHURE_URL = "https://canva.link/u5xb1eib41mbb63";
 
 const Home = () => {
   const copeCommittees = [
     {
-      id: "disec",
-      name: "DISEC",
-      fullName: "Disarmament & International Security Committee",
-      logo: "/img/DISEC.png",
-      agenda: "Evaluating the Impact of Autonomous Weapon Systems on Global Security and Peace, with Special Reference to the Middle East",
-      badge: "UNGA First Committee"
+      id: "aippm",
+      name: "AIPPM",
+      fullName: "All India Political Parties Meet",
+      logo: "/img/AIPPM.svg",
+      agenda: "Debating domestic political affairs, party ideologies, alliances, and policy reforms in Indian governance.",
+      badge: "Indian Special Committee"
     },
     {
-      id: "g20",
-      name: "G20",
-      fullName: "Group of Twenty Summit",
-      logo: "/img/G20no-bg.png",
-      agenda: "Addressing rising protectionism: balancing global trade and tariffs",
-      badge: "Economic Policy Summit"
+      id: "uncsw",
+      name: "UNCSW",
+      fullName: "United Nations Commission on the Status of Women",
+      logo: "/img/United_Nations_Human_Rights_Council_Logo.svg",
+      agenda: "Advancing global gender equality, women empowerment, safety, education, and political representation.",
+      badge: "UN Gender & Rights Organ"
+    },
+    {
+      id: "unodc",
+      name: "UNODC",
+      fullName: "United Nations Office on Drugs and Crime",
+      logo: "/img/UNSC.png",
+      agenda: "Tackling international organized crime, drug trafficking, corruption, terrorism, and criminal justice reform.",
+      badge: "Double Delegate Committee"
+    },
+    {
+      id: "ipc",
+      name: "IPC",
+      fullName: "International Press Corps",
+      logo: "/img/InternationalPress.svg",
+      agenda: "Journalism, photojournalism, delegate interviewing, and media reporting across all committee sessions.",
+      badge: "Press & Media Corps"
     }
   ];
 
   const historicalConferences = [
     {
       title: "DSU COPE MUN (Edition II)",
-      date: "23rd - 24th October",
+      date: "Past Edition Archive",
       prize: "Rs. 18,000+",
       theme: "A Pass at the Infinite",
       committees: "DISEC & G20",
@@ -62,7 +79,7 @@ const Home = () => {
 
   return (
     <div className="section-dark">
-      {/* Landing Page Hero Section with background.png */}
+      {/* Landing Page Hero Section */}
       <section className="hero-container">
         <div className="hero-overlay"></div>
         <div className="container hero-content text-center py-5 px-4">
@@ -88,7 +105,7 @@ const Home = () => {
               textShadow: "0 4px 20px rgba(0,0,0,0.8)",
             }}
           >
-            DSU COPE MUN
+            DSU COPE MUN III
           </h1>
 
           <h4
@@ -104,16 +121,16 @@ const Home = () => {
             "A Pass at the Infinite"
           </h4>
 
-          {/* Clean Quick Info Grid (No AI outline box) */}
+          {/* Clean Quick Info Grid */}
           <div className="d-flex align-items-center justify-content-center flex-wrap gap-4 mb-4 py-2">
             <div className="d-flex align-items-center gap-2" style={{ color: "#FFFFFF", fontSize: "0.95rem" }}>
               <Calendar size={18} style={{ color: "#D4AF37" }} />
-              <span>23rd - 24th October</span>
+              <span>October 23rd - 24th</span>
             </div>
             <span style={{ color: "rgba(255,255,255,0.2)" }} className="d-none d-sm-inline">•</span>
             <div className="d-flex align-items-center gap-2" style={{ color: "#FFFFFF", fontSize: "0.95rem" }}>
               <Award size={18} style={{ color: "#D4AF37" }} />
-              <span>Prize Pool: Rs. 18,000+</span>
+              <span>Prize Pool: ₹ 18,000+</span>
             </div>
             <span style={{ color: "rgba(255,255,255,0.2)" }} className="d-none d-sm-inline">•</span>
             <div className="d-flex align-items-center gap-2" style={{ color: "#FFFFFF", fontSize: "0.95rem" }}>
@@ -132,10 +149,19 @@ const Home = () => {
               Register Now
               <ExternalLink size={16} />
             </a>
-            <Link to="/cope2" className="btn-outline-gold text-decoration-none">
-              Explore Event Details
+            <Link to="/cope3" className="btn-outline-gold text-decoration-none">
+              Explore COPE 3 Details
               <ArrowRight size={16} />
             </Link>
+            {/* <a
+              href={BROCHURE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline-gold text-decoration-none"
+            >
+              <FileText size={16} className="me-2" />
+              Brochure
+            </a> */}
           </div>
         </div>
       </section>
@@ -146,33 +172,33 @@ const Home = () => {
           <div className="row g-4 text-center">
             <div className="col-6 col-md-3">
               <div className="p-2">
-                <h2 className="fw-bold gold-text mb-0" style={{ fontSize: "2.2rem" }}>2</h2>
+                <h2 className="fw-bold gold-text mb-0" style={{ fontSize: "2.2rem" }}>4</h2>
                 <span className="text-uppercase" style={{ color: "#9DA5B4", fontSize: "0.78rem", letterSpacing: "1px" }}>
-                  Active Committees
+                  COPE III Committees
                 </span>
               </div>
             </div>
             <div className="col-6 col-md-3">
               <div className="p-2">
-                <h2 className="fw-bold gold-text mb-0" style={{ fontSize: "2.2rem" }}>Rs. 18k+</h2>
+                <h2 className="fw-bold gold-text mb-0" style={{ fontSize: "2.2rem" }}>₹ 18k+</h2>
                 <span className="text-uppercase" style={{ color: "#9DA5B4", fontSize: "0.78rem", letterSpacing: "1px" }}>
-                  COPE II Prize Pool
+                  COPE III Prize Pool
                 </span>
               </div>
             </div>
             <div className="col-6 col-md-3">
               <div className="p-2">
-                <h2 className="fw-bold gold-text mb-0" style={{ fontSize: "2.2rem" }}>Rs. 75k+</h2>
+                <h2 className="fw-bold gold-text mb-0" style={{ fontSize: "2.2rem" }}>Oct 23-24</h2>
                 <span className="text-uppercase" style={{ color: "#9DA5B4", fontSize: "0.78rem", letterSpacing: "1px" }}>
-                  DSUMUN II Prize Pool
+                  Conference Dates
                 </span>
               </div>
             </div>
             <div className="col-6 col-md-3">
               <div className="p-2">
-                <h2 className="fw-bold gold-text mb-0" style={{ fontSize: "2.2rem" }}>4+</h2>
+                <h2 className="fw-bold gold-text mb-0" style={{ fontSize: "2.2rem" }}>AI-First</h2>
                 <span className="text-uppercase" style={{ color: "#9DA5B4", fontSize: "0.78rem", letterSpacing: "1px" }}>
-                  Major Delegations
+                  DSU Campus Vision
                 </span>
               </div>
             </div>
@@ -184,22 +210,22 @@ const Home = () => {
       <section className="py-5" style={{ backgroundColor: "#15181C" }}>
         <div className="container px-4">
           <div className="text-center mb-4">
-            <span className="eyebrow-text">DSU COPE MUN COMMITTEES</span>
+            <span className="eyebrow-text">COPE III COMMITTEES</span>
             <h2 className="display-6 fw-bold" style={{ color: "#FFFFFF" }}>
-              Explore Committee Agendas
+              Featured Committee Agendas
             </h2>
             <div className="gold-separator"></div>
             <p className="mx-auto" style={{ maxWidth: "680px", color: "#9DA5B4" }}>
-              Participate in intense parliamentary debates and shape solutions for pressing global issues across our two flagship committees.
+              Participate in intense parliamentary debates and shape solutions across our four flagship committees: AIPPM, UNCSW, UNODC (Double Delegate), and IPC.
             </p>
           </div>
 
-          <HorizontalScrollCards title="Committees Showcase" subtitle="COPE II EDITION">
+          <HorizontalScrollCards title="Committees Showcase" subtitle="COPE III EDITION">
             {copeCommittees.map((comm) => (
               <div
                 key={comm.id}
                 className="custom-card flex-shrink-0 p-4 d-flex flex-column justify-content-between"
-                style={{ width: "380px", minHeight: "340px" }}
+                style={{ width: "380px", minHeight: "360px" }}
               >
                 <div>
                   <div className="d-flex align-items-center justify-content-between mb-3">
@@ -213,7 +239,6 @@ const Home = () => {
                     {comm.fullName}
                   </small>
 
-                  {/* Clean Agenda Typography (No left yellow stripe / artificial dark box) */}
                   <div className="agenda-block">
                     <span className="agenda-label">Official Agenda</span>
                     <p className="agenda-text">
@@ -237,24 +262,24 @@ const Home = () => {
               </div>
             ))}
 
-            {/* Quick EB Link Card */}
+            {/* Quick Detailed Page Link Card */}
             <div
               className="custom-card flex-shrink-0 p-4 d-flex flex-column justify-content-between text-center"
-              style={{ width: "320px", minHeight: "340px", backgroundColor: "#1A1D22" }}
+              style={{ width: "320px", minHeight: "360px", backgroundColor: "#1A1D22" }}
             >
               <div>
                 <div className="p-3 rounded-circle d-inline-flex mb-3" style={{ backgroundColor: "rgba(212, 175, 55, 0.08)" }}>
                   <Users size={36} style={{ color: "#D4AF37" }} />
                 </div>
                 <h4 className="fw-bold mb-2" style={{ color: "#FFFFFF", fontFamily: "'Cinzel', serif" }}>
-                  Executive Board
+                  More Info
                 </h4>
                 <p style={{ color: "#9DA5B4", fontSize: "0.9rem" }}>
-                  Meet the distinguished Executive Board guiding DISEC & G20 committees at DSU COPE MUN.
+                  Explore complete committee descriptions, Secretary-General address, poster, and registration details.
                 </p>
               </div>
-              <Link to="/cope2/executive-board" className="btn-outline-gold text-decoration-none w-100">
-                View EB Members
+              <Link to="/cope3" className="btn-outline-gold text-decoration-none w-100">
+                View More Info
                 <ArrowRight size={16} className="ms-2" />
               </Link>
             </div>
@@ -268,24 +293,20 @@ const Home = () => {
           <div className="custom-card p-4 p-md-5">
             <div className="row align-items-center g-4">
               <div className="col-12 col-lg-5 text-center">
-                <div className="p-2 bg-dark rounded d-inline-block" style={{ border: "1px solid rgba(255,255,255,0.1)" }}>
+                <div className="p-2 bg-dark rounded d-inline-block" style={{ border: "1px solid rgba(212, 175, 55, 0.3)" }}>
                   <img
-                    src="/img/dsu_cope_mun_poster.jpg"
-                    alt="DSU COPE MUN Official Poster"
+                    src="/img/cope3_poster.png"
+                    alt="DSU COPE MUN III Official Poster"
                     className="img-fluid rounded"
-                    style={{ maxHeight: "460px", objectFit: "contain" }}
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = "/poster.jpeg";
-                    }}
+                    style={{ maxHeight: "480px", objectFit: "contain" }}
                   />
                 </div>
               </div>
 
               <div className="col-12 col-lg-7 text-white">
-                <span className="eyebrow-text">OFFICIAL EVENT BULLETIN</span>
+                <span className="eyebrow-text">CURRENT ACTIVE EVENT BULLETIN</span>
                 <h2 className="display-6 fw-bold mb-1" style={{ fontFamily: "'Cinzel', serif", color: "#FFFFFF" }}>
-                  DSU COPE MUN
+                  DSU COPE MUN III
                 </h2>
                 <h5 className="fst-italic mb-4" style={{ color: "#D4AF37" }}>
                   "A Pass at the Infinite"
@@ -298,7 +319,7 @@ const Home = () => {
                     </div>
                     <div>
                       <div style={{ fontSize: "0.75rem", color: "#D4AF37", textTransform: "uppercase", fontWeight: "700" }}>Dates</div>
-                      <div className="fw-semibold" style={{ color: "#FFFFFF" }}>23rd - 24th October</div>
+                      <div className="fw-semibold" style={{ color: "#FFFFFF" }}>October 23rd - 24th</div>
                     </div>
                   </div>
 
@@ -308,7 +329,7 @@ const Home = () => {
                     </div>
                     <div>
                       <div style={{ fontSize: "0.75rem", color: "#D4AF37", textTransform: "uppercase", fontWeight: "700" }}>Prize Pool</div>
-                      <div className="fw-semibold" style={{ color: "#FFFFFF" }}>Rs. 18,000+</div>
+                      <div className="fw-semibold" style={{ color: "#FFFFFF" }}>₹ 18,000+</div>
                     </div>
                   </div>
 
@@ -333,9 +354,17 @@ const Home = () => {
                     Click Here to Register
                     <ExternalLink size={16} className="ms-2" />
                   </a>
-                  <Link to="/cope2" className="btn-outline-gold text-decoration-none">
-                    Event Guide
+                  <Link to="/cope3" className="btn-outline-gold text-decoration-none">
+                    Detailed Event Page
                   </Link>
+                  {/* <a
+                    href={BROCHURE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline-gold text-decoration-none"
+                  >
+                    Canva Brochure
+                  </a> */}
                 </div>
 
                 <div className="pt-3 border-top border-secondary">
@@ -357,7 +386,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About DSU MUNSOC Section (Lighter Tone Background) */}
+      {/* About DSU MUNSOC Section */}
       <section className="section-light py-5" id="about">
         <div className="container px-4">
           <div className="row justify-content-center text-center mb-4">
@@ -409,7 +438,7 @@ const Home = () => {
       <section className="py-5 section-dark">
         <div className="container px-4">
           <div className="text-center mb-4">
-            <span className="eyebrow-text">LEGACY & EDITIONS</span>
+            <span className="eyebrow-text">LEGACY & ARCHIVES</span>
             <h2 className="display-6 fw-bold" style={{ color: "#FFFFFF" }}>
               Our Conference Portfolio
             </h2>
@@ -443,7 +472,7 @@ const Home = () => {
 
                 <div className="pt-2 border-top border-secondary">
                   <Link to={conf.link} className="btn-outline-gold text-decoration-none w-100 text-center">
-                    Explore Details
+                    Explore Archive Details
                     <ArrowRight size={14} className="ms-2" />
                   </Link>
                 </div>

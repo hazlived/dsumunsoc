@@ -167,10 +167,12 @@ p {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(18, 20, 23, 0.7) 0%,
-    rgba(18, 20, 23, 0.85) 65%,
-    rgba(18, 20, 23, 1) 100%
+    rgba(12, 14, 17, 0.75) 0%,
+    rgba(12, 14, 17, 0.88) 65%,
+    rgba(12, 14, 17, 0.98) 100%
   );
+  backdrop-filter: brightness(0.65) contrast(0.92) blur(2.5px);
+  -webkit-backdrop-filter: brightness(0.65) contrast(0.92) blur(2.5px);
   z-index: 1;
 }
 

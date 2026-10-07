@@ -49,18 +49,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/cope3" className="text-decoration-none fw-semibold" style={{ color: "#D4AF37" }}>
+                  COPE III (Active)
+                </Link>
+              </li>
+              <li>
                 <Link to="/cope2" className="text-decoration-none" style={{ color: "#CBD5E1" }}>
-                  DSU COPE MUN
-                </Link>
-              </li>
-              <li>
-                <Link to="/cope2/executive-board" className="text-decoration-none" style={{ color: "#CBD5E1" }}>
-                  Executive Board
-                </Link>
-              </li>
-              <li>
-                <Link to="/secretariat" className="text-decoration-none" style={{ color: "#CBD5E1" }}>
-                  Secretariat
+                  COPE II Archive
                 </Link>
               </li>
               <li>
@@ -78,6 +73,16 @@ const Footer = () => {
             </h6>
             <ul className="list-unstyled d-flex flex-column gap-2" style={{ fontSize: "0.9rem" }}>
               <li>
+                <Link to="/cope3" className="text-decoration-none" style={{ color: "#CBD5E1" }}>
+                  DSU COPE MUN III
+                </Link>
+              </li>
+              <li>
+                <Link to="/cope2" className="text-decoration-none" style={{ color: "#CBD5E1" }}>
+                  DSU COPE MUN II
+                </Link>
+              </li>
+              <li>
                 <Link to="/events/dsumun2" className="text-decoration-none" style={{ color: "#CBD5E1" }}>
                   DSUMUN Edition II
                 </Link>
@@ -90,16 +95,6 @@ const Footer = () => {
               <li>
                 <Link to="/events/cope1" className="text-decoration-none" style={{ color: "#CBD5E1" }}>
                   COPE Edition I
-                </Link>
-              </li>
-              <li>
-                <Link to="/events/delegation" className="text-decoration-none" style={{ color: "#CBD5E1" }}>
-                  MUNSOC Delegations
-                </Link>
-              </li>
-              <li>
-                <Link to="/events/others" className="text-decoration-none" style={{ color: "#CBD5E1" }}>
-                  Diplomacy Seminars
                 </Link>
               </li>
             </ul>
@@ -135,7 +130,7 @@ const Footer = () => {
               className="btn-gold text-decoration-none d-inline-flex align-items-center w-100 text-center justify-content-center"
               style={{ fontSize: "0.82rem", padding: "8px 16px" }}
             >
-              Register For DSU COPE MUN
+              Register For DSU COPE MUN III
               <ExternalLink size={14} className="ms-2" />
             </a>
           </div>

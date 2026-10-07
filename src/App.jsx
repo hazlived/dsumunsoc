@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
+import Cope3 from "./pages/Cope3";
 import Cope2 from "./pages/Cope2";
 import Cope2Eb from "./pages/Cope2Eb";
 import Dsumun2 from "./pages/Dsumun2";
@@ -33,6 +34,7 @@ function App() {
         <main className="flex-grow-1" style={{ paddingTop: "70px" }}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/cope3" element={<Cope3 />} />
             <Route path="/cope2" element={<Cope2 />} />
             <Route path="/cope2/executive-board" element={<Cope2Eb />} />
             <Route path="/events/dsumun2" element={<Dsumun2 />} />

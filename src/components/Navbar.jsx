@@ -116,6 +116,16 @@ const Navbar = () => {
               Home
             </Link>
 
+            {/* COPE 3 Direct Link */}
+            <Link
+              to="/cope3"
+              className={`nav-link-custom ${
+                location.pathname === "/cope3" ? "active" : ""
+              }`}
+            >
+              COPE III
+            </Link>
+
             {/* DSU COPE MUN Dropdown */}
             <div
               className="position-relative"
@@ -124,7 +134,7 @@ const Navbar = () => {
             >
               <button
                 className={`nav-link-custom ${
-                  location.pathname.startsWith("/cope2") ? "active" : ""
+                  location.pathname.startsWith("/cope") ? "active" : ""
                 }`}
                 style={{ cursor: "pointer" }}
               >
@@ -137,24 +147,33 @@ const Navbar = () => {
                   style={{
                     backgroundColor: "#1A1D22",
                     border: "1px solid rgba(212, 175, 55, 0.3)",
-                    minWidth: "210px",
+                    minWidth: "220px",
                     top: "100%",
                     left: 0,
                   }}
                 >
                   <Link
+                    to="/cope3"
+                    className="d-flex align-items-center justify-content-between px-3 py-2 text-decoration-none"
+                    style={{ color: "#D4AF37", fontSize: "0.9rem", fontWeight: "600" }}
+                  >
+                    <span>COPE III (Current)</span>
+                    <span className="badge bg-gold text-dark" style={{ fontSize: "0.65rem", padding: "2px 6px" }}>ACTIVE</span>
+                  </Link>
+                  <div className="dropdown-divider my-1" style={{ borderColor: "rgba(255,255,255,0.1)" }}></div>
+                  <Link
                     to="/cope2"
                     className="d-block px-3 py-2 text-decoration-none"
                     style={{ color: "#E2E8F0", fontSize: "0.9rem" }}
                   >
-                    The Event (COPE II)
+                    COPE II (Archive)
                   </Link>
                   <Link
                     to="/cope2/executive-board"
                     className="d-block px-3 py-2 text-decoration-none"
                     style={{ color: "#E2E8F0", fontSize: "0.9rem" }}
                   >
-                    Executive Board
+                    COPE II Executive Board
                   </Link>
                 </div>
               )}
@@ -225,15 +244,6 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* <Link
-              to="/secretariat"
-              className={`nav-link-custom ${
-                location.pathname === "/secretariat" ? "active" : ""
-              }`}
-            >
-              Secretariat
-            </Link> */}
-
             <a
               href="#about"
               onClick={handleAboutClick}
@@ -282,20 +292,34 @@ const Navbar = () => {
               >
                 Home
               </Link>
-              <div className="px-3 py-1 text-gold fw-bold" style={{ color: "#D4AF37", fontSize: "0.85rem" }}>
-                DSU COPE MUN
+              <Link
+                to="/cope3"
+                className="text-gold text-decoration-none py-2 px-3 fw-bold"
+                style={{ color: "#D4AF37" }}
+              >
+                DSU COPE MUN III (Active)
+              </Link>
+
+              <div className="px-3 py-1 text-gold fw-bold mt-2" style={{ color: "#D4AF37", fontSize: "0.85rem" }}>
+                DSU COPE MUN EDITIONS
               </div>
+              <Link
+                to="/cope3"
+                className="text-white text-decoration-none ps-4 py-1 fw-bold"
+              >
+                COPE III (Current Event)
+              </Link>
               <Link
                 to="/cope2"
                 className="text-secondary text-decoration-none ps-4 py-1"
               >
-                The Event (COPE II)
+                COPE II (Archive)
               </Link>
               <Link
                 to="/cope2/executive-board"
                 className="text-secondary text-decoration-none ps-4 py-1"
               >
-                Executive Board
+                COPE II Executive Board
               </Link>
 
               <div className="px-3 py-1 text-gold fw-bold mt-2" style={{ color: "#D4AF37", fontSize: "0.85rem" }}>
@@ -332,17 +356,10 @@ const Navbar = () => {
                 Diplomacy Seminars
               </Link>
 
-              {/* <Link
-                to="/secretariat"
-                className="text-white text-decoration-none py-2 px-3 fw-semibold mt-2"
-              >
-                The Secretariat
-              </Link> */}
-
               <a
                 href="#about"
                 onClick={handleAboutClick}
-                className="text-white text-decoration-none py-2 px-3 fw-semibold"
+                className="text-white text-decoration-none py-2 px-3 fw-semibold mt-2"
               >
                 About Us
               </a>
@@ -354,7 +371,7 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                   className="btn-gold text-decoration-none w-100 text-center"
                 >
-                  Register Now
+                  Register Now for COPE 3
                   <ExternalLink size={16} className="ms-2" />
                 </a>
               </div>

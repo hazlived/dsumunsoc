@@ -172,7 +172,7 @@ const UncswPortfolioMatrix = () => {
             </span>
           </div>
           <p className="mb-0" style={{ color: "#F1F3F5", fontSize: "0.95rem", lineHeight: "1.6" }}>
-            "Advancing global gender equality, women empowerment, safety, education, and political representation."
+            "Empowerment of Women through Improvements in Gender Equality and Economic Independence"
           </p>
         </div>
 

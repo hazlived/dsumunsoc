@@ -14,7 +14,7 @@ const Home = () => {
       name: "AIPPM",
       fullName: "All India Political Parties Meet",
       logo: "/img/AIPPM.svg",
-      agenda: "Debating domestic political affairs, party ideologies, alliances, and policy reforms in Indian governance.",
+      agenda: "One Nation, One Election: Ensuring Timely and Inclusive Elections, with Special Emphasis on Electoral-Roll Management, Local Self-Government and Administrative Reforms",
       badge: "Indian Special Committee"
     },
     {
@@ -22,7 +22,7 @@ const Home = () => {
       name: "UNCSW",
       fullName: "United Nations Commission on the Status of Women",
       logo: "/img/United_Nations_Human_Rights_Council_Logo.svg",
-      agenda: "Advancing global gender equality, women empowerment, safety, education, and political representation.",
+      agenda: "Empowerment of Women through Improvements in Gender Equality and Economic Independence",
       badge: "UN Gender & Rights Organ"
     },
     {
@@ -30,7 +30,7 @@ const Home = () => {
       name: "UNODC",
       fullName: "United Nations Office on Drugs and Crime",
       logo: "/img/UNSC.png",
-      agenda: "Tackling international organized crime, drug trafficking, corruption, terrorism, and criminal justice reform.",
+      agenda: "Preventing human and drug trafficking through cross border cooperation",
       badge: "Double Delegate Committee"
     },
     {
@@ -38,7 +38,7 @@ const Home = () => {
       name: "IPC",
       fullName: "International Press Corps",
       logo: "/img/InternationalPress.svg",
-      agenda: "Journalism, photojournalism, delegate interviewing, and media reporting across all committee sessions.",
+      agenda: "Report, conduct press conferences, and question delegates.",
       badge: "Press & Media Corps"
     }
   ];

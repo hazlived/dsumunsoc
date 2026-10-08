@@ -167,7 +167,7 @@ const Navbar = () => {
                     className="d-flex align-items-center justify-content-between px-3 py-2 text-decoration-none"
                     style={{ color: "#F3E5AB", fontSize: "0.85rem" }}
                   >
-                    <span>↳ UNCSW Portfolio Matrix</span>
+                    <span>↳ COPE III Portfolio Matrix</span>
                     <ExternalLink size={12} style={{ color: "#D4AF37" }} />
                   </a>
                   <div className="dropdown-divider my-1" style={{ borderColor: "rgba(255,255,255,0.1)" }}></div>

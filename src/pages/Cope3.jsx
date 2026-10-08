@@ -270,10 +270,10 @@ const Cope3 = () => {
                 <div>
                   <span className="eyebrow-text mb-1">OFFICIAL COUNTRY ALLOCATIONS</span>
                   <h3 className="h4 fw-bold mb-1" style={{ color: "#FFFFFF", fontFamily: "'Cinzel', serif" }}>
-                    COPE III UNCSW Portfolio Matrix
+                    COPE III Portfolio Matrix
                   </h3>
                   <p className="mb-0" style={{ color: "#9DA5B4", fontSize: "0.92rem" }}>
-                    Explore the live country portfolio matrix spreadsheet to check availability and select your delegation for UNCSW.
+                    Explore the live country portfolio matrix spreadsheet to check availability and select your delegation across all committees.
                   </p>
                 </div>
               </div>

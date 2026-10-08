@@ -229,20 +229,7 @@ const Cope3 = () => {
                   </p>
                 </div>
 
-                <div className="pt-3 border-top border-secondary mt-3 d-flex flex-column gap-2">
-                  {comm.id === "uncsw" && (
-                    <a
-                      href={PORTFOLIO_MATRIX_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-outline-gold text-decoration-none w-100 text-center"
-                      style={{ fontSize: "0.82rem", padding: "7px 14px" }}
-                    >
-                      <FileSpreadsheet size={14} className="me-1" />
-                      View Portfolio Matrix
-                      <ExternalLink size={12} className="ms-1" />
-                    </a>
-                  )}
+                <div className="pt-3 border-top border-secondary mt-3">
                   <a
                     href={REGISTRATION_URL}
                     target="_blank"
@@ -258,8 +245,51 @@ const Cope3 = () => {
             ))}
           </HorizontalScrollCards>
 
-          {/* Embedded Portfolio Matrix Component Commented Out
-          <UncswPortfolioMatrix /> */}
+          {/* Prominent Standalone Portfolio Matrix Callout Banner */}
+          <div
+            className="custom-card p-4 p-md-5 mt-4"
+            style={{
+              backgroundColor: "#16191E",
+              border: "1px solid rgba(212, 175, 55, 0.35)",
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.35)",
+            }}
+          >
+            <div className="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4">
+              <div className="d-flex align-items-center gap-3 text-center text-md-start flex-column flex-md-row">
+                <div
+                  className="p-3 rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                  style={{
+                    backgroundColor: "rgba(212, 175, 55, 0.12)",
+                    border: "1px solid rgba(212, 175, 55, 0.3)",
+                    width: "60px",
+                    height: "60px",
+                  }}
+                >
+                  <FileSpreadsheet size={28} style={{ color: "#D4AF37" }} />
+                </div>
+                <div>
+                  <span className="eyebrow-text mb-1">OFFICIAL COUNTRY ALLOCATIONS</span>
+                  <h3 className="h4 fw-bold mb-1" style={{ color: "#FFFFFF", fontFamily: "'Cinzel', serif" }}>
+                    COPE III UNCSW Portfolio Matrix
+                  </h3>
+                  <p className="mb-0" style={{ color: "#9DA5B4", fontSize: "0.92rem" }}>
+                    Explore the live country portfolio matrix spreadsheet to check availability and select your delegation for UNCSW.
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href={PORTFOLIO_MATRIX_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold text-decoration-none text-nowrap px-4 py-3"
+              >
+                <FileSpreadsheet size={16} className="me-2" />
+                Open Portfolio Matrix Sheet
+                <ExternalLink size={16} className="ms-2" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -160,7 +160,15 @@ const Navbar = () => {
                     <span>COPE III (Current)</span>
                     <span className="badge bg-gold text-dark" style={{ fontSize: "0.65rem", padding: "2px 6px" }}>ACTIVE</span>
                   </Link>
+                  <Link
+                    to="/cope3#uncsw-matrix"
+                    className="d-block px-3 py-2 text-decoration-none"
+                    style={{ color: "#F3E5AB", fontSize: "0.85rem" }}
+                  >
+                    ↳ UNCSW Portfolio Matrix
+                  </Link>
                   <div className="dropdown-divider my-1" style={{ borderColor: "rgba(255,255,255,0.1)" }}></div>
+
                   <Link
                     to="/cope2"
                     className="d-block px-3 py-2 text-decoration-none"

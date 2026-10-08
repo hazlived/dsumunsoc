@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Calendar, Award, MapPin, ExternalLink, ArrowRight, Shield, Globe, Users, Mail, Phone, FileText } from "lucide-react";
+import { Calendar, Award, MapPin, ExternalLink, ArrowRight, Shield, Globe, Users, Mail, Phone, FileText, FileSpreadsheet } from "lucide-react";
 import HorizontalScrollCards from "../components/HorizontalScrollCards";
+
 
 const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeLck_D2M8_dn_pv1fMxjKPZ4hm-fCqzOpyMCIhU5qAticMpw/viewform";
 const BROCHURE_URL = "https://canva.link/u5xb1eib41mbb63";
@@ -247,7 +248,17 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="pt-3 border-top border-secondary">
+                <div className="pt-3 border-top border-secondary d-flex flex-column gap-2">
+                  {comm.id === "uncsw" && (
+                    <Link
+                      to="/cope3#uncsw-matrix"
+                      className="btn-outline-gold text-decoration-none w-100 text-center"
+                      style={{ fontSize: "0.82rem", padding: "7px 14px" }}
+                    >
+                      <FileSpreadsheet size={14} className="me-1" />
+                      View Portfolio Matrix (39 Available)
+                    </Link>
+                  )}
                   <a
                     href={REGISTRATION_URL}
                     target="_blank"
@@ -261,6 +272,7 @@ const Home = () => {
                 </div>
               </div>
             ))}
+
 
             {/* Quick Detailed Page Link Card */}
             <div

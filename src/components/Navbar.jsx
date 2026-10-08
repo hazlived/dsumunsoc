@@ -160,13 +160,16 @@ const Navbar = () => {
                     <span>COPE III (Current)</span>
                     <span className="badge bg-gold text-dark" style={{ fontSize: "0.65rem", padding: "2px 6px" }}>ACTIVE</span>
                   </Link>
-                  <Link
-                    to="/cope3#uncsw-matrix"
-                    className="d-block px-3 py-2 text-decoration-none"
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1s6RuSa6RZkvZpHEFHXY0pAVZaMvS3TR23hRsWK1NEAY/edit?usp=drivesdk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="d-flex align-items-center justify-content-between px-3 py-2 text-decoration-none"
                     style={{ color: "#F3E5AB", fontSize: "0.85rem" }}
                   >
-                    ↳ UNCSW Portfolio Matrix
-                  </Link>
+                    <span>↳ UNCSW Portfolio Matrix</span>
+                    <ExternalLink size={12} style={{ color: "#D4AF37" }} />
+                  </a>
                   <div className="dropdown-divider my-1" style={{ borderColor: "rgba(255,255,255,0.1)" }}></div>
 
                   <Link

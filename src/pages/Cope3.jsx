@@ -7,6 +7,8 @@ import UncswPortfolioMatrix from "../components/UncswPortfolioMatrix";
 
 const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeLck_D2M8_dn_pv1fMxjKPZ4hm-fCqzOpyMCIhU5qAticMpw/viewform";
 const BROCHURE_URL = "https://canva.link/u5xb1eib41mbb63";
+const PORTFOLIO_MATRIX_URL = "https://docs.google.com/spreadsheets/d/1s6RuSa6RZkvZpHEFHXY0pAVZaMvS3TR23hRsWK1NEAY/edit?usp=drivesdk";
+
 
 const Cope3 = () => {
   const committees = [
@@ -230,12 +232,15 @@ const Cope3 = () => {
                 <div className="pt-3 border-top border-secondary mt-3 d-flex flex-column gap-2">
                   {comm.id === "uncsw" && (
                     <a
-                      href="#uncsw-matrix"
+                      href={PORTFOLIO_MATRIX_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="btn-outline-gold text-decoration-none w-100 text-center"
                       style={{ fontSize: "0.82rem", padding: "7px 14px" }}
                     >
                       <FileSpreadsheet size={14} className="me-1" />
-                      View Portfolio Matrix (39 Available)
+                      View Portfolio Matrix
+                      <ExternalLink size={12} className="ms-1" />
                     </a>
                   )}
                   <a
@@ -253,8 +258,8 @@ const Cope3 = () => {
             ))}
           </HorizontalScrollCards>
 
-          {/* Embedded Portfolio Matrix for UNCSW */}
-          <UncswPortfolioMatrix />
+          {/* Embedded Portfolio Matrix Component Commented Out
+          <UncswPortfolioMatrix /> */}
         </div>
       </section>
 
